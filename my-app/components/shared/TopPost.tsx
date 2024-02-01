@@ -2,9 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import Tag from "../ui/Tag";
 import Overlay from "../ui/Overlay";
+import { blogData } from "@/constants/blogData";
 const TopPost = () => {
-  const topPost = posts.filter(
-    (post) => post.topPost === true
+  const topPost = blogData.filter(
+    (blog) => blog.topPost === true
   );
   return (
     <section aria-labelledby="top-post">
@@ -22,18 +23,18 @@ const TopPost = () => {
           <Link href={`/blog/${post.id}`}>
             <article key={index}>
               <div className="relative cursor-pointer">
-                {post.img && (
+               
                   <Image
-                    src={post.img}
+                    src={post.image_path}
                     width={800}
                     height={800}
                     alt={`Image for ${post.title}`}
                   />
-                )}
+               
                 <Overlay />
               </div>
               <div className="w-full flex justify-center">
-                <Tag text={post.category} />
+                <Tag text={post.tags} />
               </div>
 
               <h3 className="font-extrabold uppercase text-tertiary text-center">
@@ -42,10 +43,10 @@ const TopPost = () => {
 
               <div className="flex gap-3 justify-center mt-2">
                 <span className="font-light">
-                  By: {post.user.name}
+                  By: {post.authorName}
                 </span>
                 <span className="italic font-light">
-                  {formatDate(post.createdAt.toString())}
+                  {post.publishDate}
                 </span>
               </div>
             </article>

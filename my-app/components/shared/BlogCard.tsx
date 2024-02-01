@@ -4,7 +4,7 @@ import Tag from "../ui/Tag";
 import Overlay from "../ui/Overlay";
 import Link from "next/link";
 
-const BlogCard= ({post , index}) => {
+const BlogCard= ({post}:any) => {
   return (
     <article className="relative rounded-lg overflow-hidden">
       <div className="w-[1000px] h-[450px] relative">

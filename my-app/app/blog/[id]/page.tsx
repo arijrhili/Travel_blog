@@ -6,22 +6,39 @@ import {
   AiOutlineFacebook,
 } from "react-icons/ai";
 
-
- 
-const page = ({searchParams}) => {
+interface searchParamsTypes {
+  id: string;
+  title: string ;
+  image_path: string;
+  paragraph:string;
+  featured:boolean;
+  topPost: boolean;
+  tags: string[];
+  authorImage:string;
+  authorName: string;
+  publishDate: string;
+}
+   
+const page = ({
+  searchParams,
+}: {
+  searchParams: searchParamsTypes;
+}) => {
   const post = searchParams;
+  
+
   return (
     <div className="w-[95%] mx-auto max-w-[1450px]">
       <div className="w-full h-[400px] relative mb-5">
         <Image
           fill
           alt="image for blog"
-          src={post.img}
+          src={post.image_path}
           className="object-cover"
         />
       </div>
 
-      <Tag text={post.category} />
+      <Tag text={post.tags } />
       <h2 className="text-4xl font-extrabold uppercase text-tertiary my-3">
         {post.title}
       </h2>
@@ -43,19 +60,19 @@ const page = ({searchParams}) => {
         </aside>
 
         <article>
-          <p className="text-xl">{post.desc}</p>
+          <p className="text-xl">{post.paragraph}</p>
 
           <div className="mt-5 flex gap-5 items-center">
             <Image
-              src={post.user.image}
+              src={post.authorImage}
               width={500}
               height={500}
               alt={`Image of ${post.authorName}`}
               className="rounded-full w-20 h-20 object-cover"
             />
             <div className="flex gap-1 flex-col">
-              <span>{post.user.name}</span>
-              <span>{formatDate(post.createdAt)}</span>
+              <span>{post.authorName}</span>
+              <span>{post.publishDate}</span>
             </div>
           </div>
         </article>

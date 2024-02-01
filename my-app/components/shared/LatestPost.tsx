@@ -1,5 +1,4 @@
 "use client";
-
 import { useState } from "react";
 import BlogCard from "./BlogCard";
 import Button from "../ui/Button";
@@ -33,7 +32,7 @@ const LatestPost = () => {
         {latestPost
           .slice(0, visibleBlogs)
           .map((post, id) => (
-            <BlogCard post={post} key={id} />
+            <BlogCard post={post} key={id}  />
           ))}
         {visibleBlogs < latestPost.length && (
           <div className="flex justify-center">
