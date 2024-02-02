@@ -2,6 +2,7 @@ import Overlay from "../ui/Overlay";
 import Link from "next/link";
 import { blogData } from "@/constants/blogData";
 import Tag from "../ui/Tag";
+
 const Hero = () => {
   const featuredPost = blogData.filter(
     (blog) => blog.featured === true
@@ -30,7 +31,8 @@ const Hero = () => {
                 {post.publishDate}
               </span>
             </div>
-            <Link href={`/blog/${post.id}`}>
+            <Link href={{pathname:`/blog/${post.id}`,query:{...post}}}>
+
               <div className="relative max-h-[600px] overflow-hidden shadow-xl">
                
                   <img
@@ -48,12 +50,12 @@ const Hero = () => {
         <div className="grid grid-cols-3 gap-8 max-lg:grid-cols-1">
           {bottomFeatured.map((post,id) => (
             <article
+            key={id}
               className="flex flex-col gap-3 items-center text-center relative"
             >
               <Link
                 className="w-full"
-                href={`/blog/${post.id}`}
-              >
+                href={{pathname:`/blog/${post.id}`,query:{...post}}}>
                 <div className="relative  overflow-hidden h-72 shadow-xl w-full">
                 
                     <img

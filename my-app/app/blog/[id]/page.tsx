@@ -35,6 +35,7 @@ const page = ({
           alt="image for blog"
           src={post.image_path}
           className="object-cover"
+        
         />
       </div>
 
