@@ -2,7 +2,7 @@
 import React from 'react';
 
 interface TagProps {
-  text: string | string[];
+  text:  string[];
 }
 
 const Tag = ({ text }: TagProps) => {

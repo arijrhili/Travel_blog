@@ -20,7 +20,7 @@ const TopPost = () => {
 
       <div className="flex h-full flex-col gap-12 items-center">
         {topPost.map((post, index) => (
-          <Link href={`/blog/${post.id}`}>
+            <Link href={{pathname:`/blog/${post.id}`,query:{...post}}}>
             <article key={index}>
               <div className="relative cursor-pointer">
                

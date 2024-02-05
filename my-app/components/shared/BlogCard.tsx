@@ -8,14 +8,14 @@ const BlogCard= ({post}:any) => {
   return (
     <article className="relative rounded-lg overflow-hidden">
       <div className="w-[1000px] h-[450px] relative">
-        {post.img && (
+       
           <Image
             src={post.image_path}
             fill
             alt={`image for ${post.title}`}
             className="object-cover"
           />
-        )}
+      
         <Overlay />
       </div>
 
@@ -30,9 +30,9 @@ const BlogCard= ({post}:any) => {
       </div>
 
       <Link
-        href={`/blog/${post.id}`}
-        className="absolute bottom-0 right-0 bg-tertiary p-5 text-white rounded-tl-lg z-6 cursor-pointer"
-      >
+             href={{pathname:`/blog/${post.id}`,query:{...post}}}
+            className="absolute bottom-0 right-0 bg-tertiary p-5 text-white rounded-tl-lg z-6 cursor-pointer">
+     
         <AiOutlineArrowRight size={30} />
       </Link>
     </article>
