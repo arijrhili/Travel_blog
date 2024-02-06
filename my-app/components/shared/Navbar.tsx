@@ -55,9 +55,9 @@ const Navbar: React.FC<NavbarProps> = ({ user }) => {
       >
         <div className="flex-1">
           <Link href={"/"}>
-            <h1 className="text-3xl font-extrabold text-secondary">
-              Explore
-              <span className="text-primary">X</span>
+            <h1 className="text-3xl font-extrabold text-gray-600">
+              <span className="text-2xl mr-2">FREQUENCE</span>
+              <span className="text-blue-900">MEDICALE</span>
             </h1>
           </Link>
         </div>

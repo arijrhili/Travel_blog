@@ -18,7 +18,7 @@ const Route = ({
     <Link
       href={route}
       onClick={onClick}
-      className={clsx(isActive && "text-primary")}
+      className={clsx(isActive && "text-blue-900")}
     >
       {label}
     </Link>
