@@ -10,7 +10,7 @@ const page = () => {
           alt="about image"
           className="object-cover"
         />
-        <h1 className="flex absolute w-full h-full justify-center items-center text-4xl font-extrabold uppercase text-white">
+        <h1 className="flex absolute w-full h-full justify-left items-center text-4xl font-extrabold uppercase text-blue-900">
           About Us
         </h1>
       </div>
@@ -20,7 +20,7 @@ const page = () => {
           
 Directeur de la publication :  Dr Jérôme Bargé
 
-Directeur de la rédaction :  Dr Jean-Paul Marre 
+Directeur de la rédaction :  Dr Jean-Paul Marre
 
 Rédacteurs en chef : le Pr Gilles Montalescot (cardiologie), le Pr Brigitte Dréno & le Dr Barouyr Baroudjian (dermatologie & onco-dermatologie), le Pr Patrice Darmon & le Dr Louis Potier (diabétologie),  le Pr Mohamad Mohty (Hématologie), le Pr Jérôme de Sèze (Neurologie), le Pr Jean-Baptiste Bachet (onco-digestif), le Pr Gilles Freyer (onco-sein & ovaire), le Pr Nicolas Girard (onco-thoracique), le Dr Olivier le Rouzic (pneumologie), le Pr Amine Benyamina (psy-addictologie), le Pr Jean Sibilia (rhumatologie).
 
@@ -57,12 +57,10 @@ L’audience de frequencemedicale.com est assurée par AT Internet.
         </p>
 
         <div className="w-full items-center flex justify-center">
-          <Image
-            src="/assets/signature.png"
-            width={500}
-            height={500}
-            alt="singnature"
-          />
+        <h1 className="text-3xl font-extrabold text-gray-600">
+              <span className="text-2xl mr-2 uppercase">fréquence</span>
+              <span className="text-blue-900 uppercase">médicale</span>
+            </h1>
         </div>
       </div>
     </div>

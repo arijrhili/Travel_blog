@@ -12,8 +12,16 @@ import { navLinks } from "@/constants";
 import Link from "next/link";
 import Route from "../ui/Route";
 import useMenuActive from "@/hooks/useMenuActive";
+import { User } from "@prisma/client";
+import { signOut } from "next-auth/react";
 
-const MobileMenu  = () => {
+interface MobileMenuProps {
+  user: User;
+}
+
+const MobileMenu: React.FC<MobileMenuProps> = ({
+  user,
+}) => {
   const [openMobileMenu, setOpenMobileMenu] =
     useState(false);
 
@@ -44,10 +52,10 @@ const MobileMenu  = () => {
           >
             <div className="border-b py-5 text-center">
               <Link href={"/"}>
-                <h1 className="text-3xl font-extrabold text-secondary">
-                  Explore
-                  <span className="text-primary">X</span>
-                </h1>
+              <h1 className="text-3xl font-extrabold text-gray-600">
+              <span className="text-2xl mr-2 uppercase">fréquence</span>
+              <span className="text-blue-900 uppercase">médicale</span>
+            </h1>
               </Link>
 
               <div className="flex gap-5 text-secondary flex-1 justify-center text-xl mt-5">
@@ -60,7 +68,7 @@ const MobileMenu  = () => {
 
             <ul className="flex items-center justify-center gap-5 flex-col mt-5  py-10 border-b">
               {navLinks.map((link, index) => {
-          const isActive = useMenuActive(link.route)
+                const isActive = useMenuActive(link.route);
 
                 return (
                   <li key={index}>
@@ -77,7 +85,7 @@ const MobileMenu  = () => {
               })}
             </ul>
 
-           
+            {!user && (
               <div className="flex gap-5 flex-1 flex-col py-5">
                 <Button
                   text="Log In"
@@ -90,9 +98,9 @@ const MobileMenu  = () => {
                   aria="Sign up button"
                 />
               </div>
-          
+            )}
 
-           
+            {user && (
               <div>
                 <ul className="flex flex-col  gap-5 items-center">
                   <Link
@@ -108,9 +116,12 @@ const MobileMenu  = () => {
                     <li>My Post</li>
                   </Link>
 
+                  <li onClick={() => signOut()}>
+                    Sign Out
+                  </li>
                 </ul>
               </div>
-          
+            )}
           </div>
         </div>
       ) : null}

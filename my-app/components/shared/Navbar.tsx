@@ -55,9 +55,9 @@ const Navbar: React.FC<NavbarProps> = ({ user }) => {
       >
         <div className="flex-1">
           <Link href={"/"}>
-            <h1 className="text-3xl font-extrabold text-gray-600">
-              <span className="text-2xl mr-2">FREQUENCE</span>
-              <span className="text-blue-900">MEDICALE</span>
+          <h1 className="text-3xl font-extrabold text-gray-600">
+              <span className="text-2xl mr-2 uppercase">fréquence</span>
+              <span className="text-blue-900 uppercase">médicale</span>
             </h1>
           </Link>
         </div>
@@ -100,7 +100,7 @@ const Navbar: React.FC<NavbarProps> = ({ user }) => {
               src={user.image as string}
               width={50}
               height={50}
-              className="rounded-full border-4 border-primary cursor-pointer"
+              className="rounded-full border-4 border-blue-900 cursor-pointer"
               alt={`Image of ${user.name}`}
               onClick={() => setOpenUserMenu(!openUserMenu)}
             />
@@ -110,13 +110,13 @@ const Navbar: React.FC<NavbarProps> = ({ user }) => {
         {openUserMenu && (
           <ul className="z-10 absolute right-12 top-[70px] w-48 bg-white shadow-md rounded-md p-4">
             <Link
-              href="/create"
+              href="posts/create"
               onClick={() => setOpenUserMenu(false)}
             >
               <li>Create a post</li>
             </Link>
             <Link
-              href="/userposts"
+              href="posts/userposts"
               onClick={() => setOpenUserMenu(false)}
             >
               <li>My Post</li>

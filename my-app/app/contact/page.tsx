@@ -14,13 +14,13 @@ const page = () => {
           className="object-cover"
         />
         <Overlay />
-        <h1 className="flex absolute w-full h-full justify-center items-center text-4xl font-extrabold uppercase text-white">
+        <h1 className="flex absolute w-full h-full justify-left items-center text-4xl font-extrabold uppercase text-blue-900">
           Contact Us
         </h1>
       </div>
 
       <div className="p-10 leading-8 text-lg mt-10 relative m-auto rouded-lg text-center">
-        <h1 className="text-4xl font-extrabold w-full text-center uppercase text-primary mb-10">
+        <h1 className="text-4xl font-extrabold w-full text-center uppercase text-blue-900 mb-10">
           Let's Discuss
         </h1>
 

@@ -1,4 +1,4 @@
-import getCurrentUser from "../actions/getCurrentUser";
+import getCurrentUser from "../../actions/getCurrentUser";
 import CreateForm from "@/components/shared/CreateForm";
 const page = async () => {
   const user = await getCurrentUser();

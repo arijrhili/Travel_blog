@@ -29,11 +29,11 @@ const Posts = () => {
   };
 
   const categories = [
-    "Adventure",
-    "Wanderlust",
-    "Culture",
-    "Discovery",
-    "Journeys",
+    "CARDIOLOGIE",
+    "RHUMATOLOGIE",
+    "UROLOGIE",
+    " PSYCHIATRIE",
+    "ONCOLOGIE",
   ];
 
   const handleCategoryChange = (category: string) => {

@@ -13,8 +13,8 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "ExploreX",
-  description: "Travel Blog",
+  title: "Fréquence Médicale",
+  description: "medical web site",
 };
 
 export default async function RootLayout({
@@ -28,7 +28,7 @@ export default async function RootLayout({
       <AuthContext>
         <EdgeStoreProvider>
           <body
-            className={`${roboto.className} overflow-x-hidden bg-light`}
+            className={`${roboto.className} overflow-x-hidden bg-white`}
           >
             <Navbar user={user as any} />
             {children}
