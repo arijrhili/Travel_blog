@@ -1,8 +1,10 @@
+"use client";
 import React, { useTransition, useState } from "react";
 import Image from "next/image";
-import TabButton from "../ui/TabButton";
+import TabButton from "../ui/TabBuuton";
 
-interface TabDataItem {///
+
+interface TabDataItem {
   title: string;
   id: string;
   content: React.ReactNode;
@@ -10,36 +12,34 @@ interface TabDataItem {///
 
 const TAB_DATA = [
     {
-      title: "Skills",
-      id: "skills",
+      title: "Statistiques de fréquentation :",
+      id: "Statistiques de fréquentation :",
       content: (
         <ul className="list-disc pl-2">
-          <li>Node.js</li>
-          <li>Express</li>
-          <li>PostgreSQL</li>
-          <li>Sequelize</li>
-          <li>JavaScript</li>
-          <li>React</li>
+          <li>(Commission Paritaire des Publications et Agences de Presse) : 0327 W 92646
+
+Partenariats avec les sociétés savantes (SFD, SPILF, FFP, CNCF, CRI)</li>
         </ul>
       ),
     },
     {
-      title: "Education",
-      id: "education",
+      title: "Principes éditoriaux : ",
+      id: "Principes éditoriaux :",
       content: (
         <ul className="list-disc pl-2">
-          <li>Fullstack Academy of Code</li>
-          <li>University of California, Santa Cruz</li>
+          <li>Chaque édition propose une sélection d’informations d’actualité. La sélection de ces informations est faite par le rédacteur en chef avec l’aide d’un comité éditorial d’experts indépendants et de médecins journalistes professionnels. Les sujets proposés sont réalisés par les journalistes de la rédaction de Fréquence Médicale. Ils sont revus par le rédacteur en chef et diffusés sous la seule responsabilité de la rédaction et du responsable de la publication. Ils se conforment aux dispositions des lois du 29 juillet 1881 sur la liberté de la presse, du 1er août 1986 et du 30 septembre 1986.
+Déclaration publique de conflit d'intérêts demandée à nos auteurs et nos experts.
+
+Identification claire et transparente des espaces publicitaires en marge des articles scientifiques.</li>
         </ul>
       ),
     },
     {
-      title: "Certifications",
-      id: "certifications",
+      title: "Diffusion emailing :",
+      id: "Diffusion emailing :",
       content: (
         <ul className="list-disc pl-2">
-          <li>AWS Cloud Practitioner</li>
-          <li>Google Professional Cloud Developer</li>
+          <li>des campagnes e-mailings sont réservées aux médecins concernés membre à chaque édition. Les campagnes contiennent des liens d’accès aux différentes informations dont le comité éditorial aura jugé de l’envoi.</li>
         </ul>
       ),
     },
@@ -55,40 +55,49 @@ const AboutSection: React.FC = () => {
   };
 
   return (
-    <section className="text-white" id="about">
+    <section className="text-black" id="about">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <Image src="/images/about-image.png" alt="about image" width={500} height={500} />
+        <Image src="/assets/fm.png" alt="about image" width={500} height={500} />
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-          <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
+          <h2 className="text-4xl font-bold text-black mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
-            I am a full stack web developer with a passion for creating
-            interactive and responsive web applications. I have experience
-            working with JavaScript, React, Redux, Node.js, Express, PostgreSQL,
-            Sequelize, HTML, CSS, and Git. I am a quick learner and I am always
-            looking to expand my knowledge and skill set. I am a team player and
-            I am excited to work with others to create amazing applications.
+ 
+Directeur de la publication :  Dr Jérôme Bargé
+
+Directeur de la rédaction :  Dr Jean-Paul Marre 
+
+Rédacteurs en chef : le Pr Gilles Montalescot (cardiologie), le Pr Brigitte Dréno & le Dr Barouyr Baroudjian (dermatologie & onco-dermatologie), le Pr Patrice Darmon & le Dr Louis Potier (diabétologie),  le Pr Mohamad Mohty (Hématologie), le Pr Jérôme de Sèze (Neurologie), le Pr Jean-Baptiste Bachet (onco-digestif), le Pr Gilles Freyer (onco-sein & ovaire), le Pr Nicolas Girard (onco-thoracique), le Dr Olivier le Rouzic (pneumologie), le Pr Amine Benyamina (psy-addictologie), le Pr Jean Sibilia (rhumatologie).
+
+Journalistes Médicaux : le Dr Clothide Bonnet, Juliette de Noiron (PhD), Mathilde Debry, le Dr Claire Lewandowski, le Dr Jean-Paul Marre, le Dr Caroline Pombourcq
+
+Directrice Commerciale : Peggy Berardi
+
+Webmaster - Responsable technique : Benicio Ferreira
+
+Assistante : Kateline Renaudin
           </p>
           <div className="flex flex-row justify-start mt-8">
+            
             <TabButton
-              selectTab={() => handleTabChange("skills")}
-              active={tab === "skills"}
+              selectTab={() => handleTabChange("Principes éditoriaux :")}
+              active={tab === "Principes éditoriaux :"}
             >
               {" "}
-              Skills{" "}
+              Principes éditoriaux :{" "}
             </TabButton>
             <TabButton
-              selectTab={() => handleTabChange("education")}
-              active={tab === "education"}
+              selectTab={() => handleTabChange("Diffusion emailing :")}
+              active={tab === "Diffusion emailing :"}
             >
               {" "}
-              Education{" "}
+              Diffusion emailing :{" "}
             </TabButton>
             <TabButton
-              selectTab={() => handleTabChange("certifications")}
-              active={tab === "certifications"}
+              selectTab={() => handleTabChange("Statistiques de fréquentation :")}
+              active={tab === "Statistiques de fréquentation :"}
             >
               {" "}
-              Certifications{" "}
+              Statistiques de fréquentation :{" "}
             </TabButton>
           </div>
           <div className="mt-8">

@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const HeroSection = () => {
   return (
-    <section className="lg:py-16">
+    <section className="lg:py-16 ">
       <div className="grid grid-cols-1 sm:grid-cols-12">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
@@ -22,13 +22,13 @@ const HeroSection = () => {
             <br></br>
             <TypeAnimation
               sequence={[
-                "Actualités médicales.",
+                "Actualités médicales",
                 1000,
                 "Transparence éditoriale",
                 1000,
-                "Fiabilité avec CPPAP.",
+                "Fiabilité avec CPPAP",
                 1000,
-                " partenariats savants. ",
+                " partenariats savants",
                 1000,
               ]}
               wrapper="span"
@@ -40,7 +40,22 @@ const HeroSection = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
             voluptuous.
           </p>
-        
+          <div>
+            <Link
+              href="/#contact"
+              className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-black"
+            >
+              Hire Me
+            </Link>
+            <Link
+              href="/"
+              className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3"
+            >
+              <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
+                Download CV
+              </span>
+            </Link>
+          </div>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
