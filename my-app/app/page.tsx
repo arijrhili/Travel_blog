@@ -6,8 +6,8 @@ import HeroSection from '@/components/shared/HeroSection'
 import AboutSection from '@/components/shared/AboutSection'
 const Home = () => {
   return (
-  <main className="flex min-h-screen flex-col bg-white">
-  <div className="container mt-24 mx-auto px-12 py-12">
+  <main className="">
+  <div className="container mt-0 mx-auto px-0 py-0">
 
   <HeroSection/>
  

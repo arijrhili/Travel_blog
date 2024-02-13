@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
@@ -7,73 +6,39 @@ import Link from "next/link";
 
 const HeroSection = () => {
   return (
-    <section className="lg:py-16 ">
-      <div className="grid grid-cols-1 sm:grid-cols-12">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
-        >
-          <h1 className="text-blue mb-4 text-4xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold">
-            <span className="text-blue-900 bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
-            Fréquence Médicale : {" "}
-            </span>
-            <br></br>
-            <TypeAnimation
-              sequence={[
-                "Actualités médicales",
-                1000,
-                "Transparence éditoriale",
-                1000,
-                "Fiabilité avec CPPAP",
-                1000,
-                " partenariats savants",
-                1000,
-              ]}
-              wrapper="span"
-              speed={50}
-              repeat={Infinity}
-            />
-          </h1>
-          <p className="text-[#161b1f] text-base sm:text-lg mb-6 lg:text-xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-            voluptuous.
-          </p>
-          <div>
-            <Link
-              href="/#contact"
-              className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-black"
-            >
-              Hire Me
-            </Link>
-            <Link
-              href="/"
-              className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3"
-            >
-              <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
-                Download CV
-              </span>
-            </Link>
+    <section className="relative bg-white overflow-hidden">
+      <div className="bg-slate-700">
+        
+        <div className="navbar-menu hidden fixed top-0 left-0 z-50 w-full h-full bg-slate-700 bg-opacity-50">
+          {/* ... (rest of the navbar menu code) ... */}
+        </div>
+      </div>
+      <div className="py-20 md:py-28 bg-slate-700		" style={{ backgroundImage: "url('flex-ui-assets/elements/pattern-dark2.svg')", backgroundPosition: "center" }}>
+        <div className="container px-4 mx-auto">
+          <div className="flex flex-wrap xl:items-center -mx-4">
+            <div className="w-full md:w-1/2 px-4 mb-16 md:mb-0">
+              <span className="inline-block py-px px-2 mb-4 text-xs leading-5 text-white bg-blue-500 uppercase rounded-9xl">Located in London</span>
+              <h1 className="mb-6 text-3xl md:text-5xl lg:text-6xl leading-tight text-white font-bold tracking-tight">Your Health and Wellbeing, our Priority</h1>
+              <p className="mb-8 text-lg md:text-xl text-coolGray-400 font-medium">Our goal is to make sure our customers receive the best treatment they need in a pleasant environment.</p>
+              <div className="flex flex-wrap">
+                <div className="w-full md:w-auto py-1 md:py-0 md:mr-4"><a className="inline-block py-5 px-7 w-full text-base md:text-lg leading-4 text-blue-50 font-medium text-center bg-blue-500 hover:bg-blue-600 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 rounded-md shadow-sm" href="#">+44 0808 239 1352</a></div>
+                <div className="w-full md:w-auto py-1 md:py-0"><a className="inline-block py-5 px-7 w-full text-base md:text-lg leading-4 text-coolGray-100 font-medium text-center bg-coolGray-700 hover:bg-coolGray-800 focus:ring-2 focus:ring-coolGray-700 focus:ring-opacity-50 rounded-md shadow-sm" href="#">Book an appointment</a></div>
+              </div>
+            </div>
+            <div className="w-full md:w-1/2 px-4">
+              <div className="relative mx-auto md:mr-0 max-w-max">
+                <img className="absolute z-10 -left-8 -top-8 w-28 md:w-auto text-yellow-400" src="flex-ui-assets/elements/circle3-violet.svg" alt="" />
+                <img className="absolute z-10 -right-7 -bottom-8 w-28 md:w-auto text-blue-500" src="flex-ui-assets/elements/dots3-red.svg" alt="" />
+                <img className="relative rounded-7xl" src="https://static.shuffle.dev/uploads/files/f0/f06b07bbaa333667fb1c271d47148db58b07b467/pexels-evg-kowalievska-1170979.jpg" alt="" />
+              </div>
+            </div>
           </div>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="col-span-4 place-self-center mt-4 lg:mt-0"
-        >
-         <div className="bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
-    <Image
-        src="/assets/fm.png"
-        alt="hero image"
-        className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-        width={300}
-        height={300}
-    />
-</div>
-
-        </motion.div>
+        </div>
+      </div>
+      <div className="wave-bottom w-full text-slate-700">
+        <svg viewBox="0 0 1440 116" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 51.4091H349.922C606.664 51.4091 859.771 116 1080 116C1300.23 116 1440 51.4091 1440 51.4091V0H0V51.4091Z" fill="currentColor"></path>
+        </svg>
       </div>
     </section>
   );

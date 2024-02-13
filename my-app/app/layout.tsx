@@ -28,7 +28,7 @@ export default async function RootLayout({
       <AuthContext>
         <EdgeStoreProvider>
           <body
-            className={`${roboto.className}  bg-white`}
+            className={`${roboto.className} `}
           >
             <Navbar user={user as any} />
             {children}
