@@ -55,20 +55,20 @@ const AboutSection: React.FC = () => {
   };
 
   return (
-    <section className="text-black" id="about">
-      <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <Image src="/assets/fm.png" alt="about image" width={500} height={500} />
-        <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
+    <section className="text-black "  >
+      <div className="md:grid md:grid-cols-2 gap-8 items-center mx-24 py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
+        <Image src="/assets/fm.png" alt="about image" width={350} height={500} />
+        <div className="mt-4  md:mt-0 md:mb-4 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-black mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
  
-Directeur de la publication :  Dr Jérôme Bargé
+Directeur de la publication :  Dr Jérôme Bargé<br></br>
 
-Directeur de la rédaction :  Dr Jean-Paul Marre 
+Directeur de la rédaction :  Dr Jean-Paul Marre <br></br>
 
-Rédacteurs en chef : le Pr Gilles Montalescot (cardiologie), le Pr Brigitte Dréno & le Dr Barouyr Baroudjian (dermatologie & onco-dermatologie), le Pr Patrice Darmon & le Dr Louis Potier (diabétologie),  le Pr Mohamad Mohty (Hématologie), le Pr Jérôme de Sèze (Neurologie), le Pr Jean-Baptiste Bachet (onco-digestif), le Pr Gilles Freyer (onco-sein & ovaire), le Pr Nicolas Girard (onco-thoracique), le Dr Olivier le Rouzic (pneumologie), le Pr Amine Benyamina (psy-addictologie), le Pr Jean Sibilia (rhumatologie).
+Rédacteurs en chef : le Pr Gilles Montalescot (cardiologie), le Pr Brigitte Dréno & le Dr Barouyr Baroudjian (dermatologie & onco-dermatologie), le Pr Patrice Darmon & le Dr Louis Potier (diabétologie),  le Pr Mohamad Mohty (Hématologie), le Pr Jérôme de Sèze (Neurologie), le Pr Jean-Baptiste Bachet (onco-digestif), le Pr Gilles Freyer (onco-sein & ovaire), le Pr Nicolas Girard (onco-thoracique), le Dr Olivier le Rouzic (pneumologie), le Pr Amine Benyamina (psy-addictologie), le Pr Jean Sibilia (rhumatologie).<br></br>
 
-Journalistes Médicaux : le Dr Clothide Bonnet, Juliette de Noiron (PhD), Mathilde Debry, le Dr Claire Lewandowski, le Dr Jean-Paul Marre, le Dr Caroline Pombourcq
+Journalistes Médicaux : le Dr Clothide Bonnet, Juliette de Noiron (PhD), Mathilde Debry, le Dr Claire Lewandowski, le Dr Jean-Paul Marre, le Dr Caroline Pombourcq<br></br>
 
 Directrice Commerciale : Peggy Berardi
 

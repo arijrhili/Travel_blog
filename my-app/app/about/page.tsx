@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const page = () => {
   return (
-    <div className="w-[95%] mx-auto max-w-[1450px]">
+    <div className="">
       <div className="relative h-[500px] w-full">
         <Image
           src="/assets/about.jpg"

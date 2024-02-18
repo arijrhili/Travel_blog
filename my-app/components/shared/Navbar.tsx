@@ -48,7 +48,7 @@ const Navbar: React.FC<NavbarProps> = ({ user }) => {
   >
     <div
       className={clsx(
-        "w-[95%] mx-auto max-w-[1450px] flex  items-center justify-between  border-b border-gray-100",
+        "w-[95%] mx-auto  flex  items-center   border-b border-gray-100",
         isScrolling && "pb-0 border-none",
         !isScrolling && "pb-5"
       )}
@@ -63,7 +63,7 @@ const Navbar: React.FC<NavbarProps> = ({ user }) => {
           </Link>
         </div>
 
-        <ul className="flex items-center justify-center gap-16 flex-2 max-md:hidden">
+        <ul className="flex items-center justify-center gap-10 flex-2 max-md:hidden text-black font-bold">
           {navLinks.map((link, index) => {
             const isActive = useMenuActive(link.route);
 
@@ -82,15 +82,11 @@ const Navbar: React.FC<NavbarProps> = ({ user }) => {
         {!user && (
           <div className="flex gap-5 flex-1 justify-end max-md:hidden">
             <Button
-              text="Log In"
+              text="Login"
               onClick={() => router.push("/access")}
               aria="Log in button"
             />
-            <Button
-              text="Sign Up"
-              onClick={() => router.push("/access")}
-              aria="Sign up button"
-            />
+           
           </div>
         )}
 

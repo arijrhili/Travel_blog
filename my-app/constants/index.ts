@@ -1,20 +1,54 @@
 export const navLinks = [
   {
     route: "/",
-    label: "Home",
+    label: "ACTUALITÉS",
   },
   {
     route: "/posts",
-    label: "Posts",
+    label: "JDF",
+  },
+ 
+  {
+    route: "/posts",
+    label: "CLINIQUE",
   },
   {
-    route: "/about",
-    label: "About",
+    route: "/posts",
+    label: "DÉCRYPTAGE",
+  },
+ 
+  {
+    route: "/posts",
+    label: " CONGRÈS",
   },
   {
-    route: "/contact",
-    label: "Contact",
+    route: "/posts",
+    label: "PODCASTS",
   },
+  {
+    route: "/posts",
+    label: "EDUCATION PATIENTS",
+  },
+  {
+    route: "/posts",
+    label: "PARCOURS",
+  },
+  {
+    route: "/posts",
+    label: "PARTENAIRES",
+  },
+  {
+    route: "/MEDTV",
+    label: "EDUCATION PATIENTS",
+  },
+ // {
+   // route: "/about",
+    //label: "About",
+  //},
+  //{
+    //route: "/contact",
+    //label: "Contact",
+  //},
 ];
 
 

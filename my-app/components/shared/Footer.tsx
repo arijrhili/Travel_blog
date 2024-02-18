@@ -13,10 +13,17 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <div className="w-full py-5 bg-tertiary mt-10">
-      <div className="w-[95%] mx-auto max-w-[1450px]">
-        <div className="py-5 border-b border-gray-300 border-opacity-20 flex justify-between items-center max-md:flex-col max-md:gap-8">
-          <div className="flex-1">
+    <section className="bg-white">
+    <div className="wave-top w-full text-slate-700">
+      <svg viewBox="0 0 1440 116" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 64.5909H349.922C606.664 64.5909 859.771 -7.62939e-06 1080 -7.62939e-06C1300.23 -7.62939e-06 1440 64.5909 1440 64.5909V116H0V64.5909Z" fill="currentColor"></path>
+      </svg>
+    </div>
+    <div className="bg-slate-700" style={{ backgroundImage: "url('flex-ui-assets/elements/pattern-dark.svg')", backgroundPosition: "center" }}>
+      <div className="container px-4 mx-auto">
+        <div className="pt-24 pb-11 mx-auto max-w-4xl">
+         
+          <div className="flex flex-wrap justify-center -mx-3 lg:-mx-6">
             <Link href={"/"}>
             <h1 className="text-3xl font-extrabold text-gray-600">
               <span className="text-2xl mr-2">FREQUENCE</span>
@@ -48,11 +55,15 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="w-full text-center mt-3 text-sm text-white">
-          <span>All Rights Reserved fréquence Médicale.com</span>
+       
+          </div>
         </div>
-      </div>
-    </div>
+        <div className="border-b border-slate-700"></div>
+        <div className="container px-4 mx-auto">
+          <p className="py-10 md:pb-20 text-lg md:text-xl text-slate-600 font-medium text-center">© All Rights Reserved fréquence Médicale.com</p>
+        </div>
+     
+    </section>
   );
 };
 

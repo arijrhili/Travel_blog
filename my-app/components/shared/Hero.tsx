@@ -13,38 +13,31 @@ const Hero = () => {
 
   return (
     <section className="relative">
-      <div className="w-[95%] mx-auto max-w-[1450px] z-1">
-        {topFeatured.map((post,id) => (
-          <article
-            key={id}
-            className="flex flex-col gap-5 mb-5 text-center relative"
-          >
-          <Tag text={post.tags}/>
-
-            <h2 className="text-6xl font-extrabold uppercase text-tertiary">
-              {post.title}
-            </h2>
-            <div className="flex items-center gap-3 font-light text-tertiary justify-center">
-            
-              <span>{post.authorName}</span>
-              <span className=" italic">
-                {post.publishDate}
-              </span>
-            </div>
-            <Link href={{pathname:`/blog/${post.id}`,query:{...post}}}>
-
-              <div className="relative max-h-[600px] overflow-hidden shadow-xl">
-               
-                  <img
-                    src={post.image_path}
-                    alt={`image for ${post.title}`}
-                    className="object-cover w-full h-full"
-                  />
-               
-                <Overlay />
-              </div>
+    <div className="w-[95%] mx-auto max-w-[1950px] z-1">
+      <h1 className="text-6xl font-extrabold uppercase text-tertiary text-center" >Actualité</h1>
+      {topFeatured.map((post, id) => (
+        <article key={id} className="flex flex-col gap-5 mb-5 text-center relative">
+          <div className="relative max-h-[600px] overflow-hidden shadow-xl">
+            <Link href={{ pathname: `/blog/${post.id}`, query: { ...post } }}>
+             
+                <img
+                  src={post.image_path}
+                  alt={`image for ${post.title}`}
+                  className="object-cover w-full h-full"
+                />
+             
             </Link>
-          </article>
+            <Overlay />
+          </div>
+          <Tag text={post.tags} />
+          <h2 className="text-3xl font-extrabold uppercase text-tertiary">
+            {post.title}
+          </h2>
+          <div className="flex items-center gap-3 font-light text-tertiary  justify-center">
+            <span>{post.authorName}</span>
+            <span className="italic">{post.publishDate}</span>
+          </div>
+        </article>
         ))}
 
         <div className="grid grid-cols-3 gap-8 max-lg:grid-cols-1">
