@@ -3,11 +3,18 @@ import Link from "next/link";
 import Tag from "../ui/Tag";
 import Overlay from "../ui/Overlay";
 import { blogData } from "@/constants/blogData";
+import Head from 'next/head';
+
 const TopPost = () => {
   const topPost = blogData.filter(
     (blog) => blog.topPost === true
   );
   return (
+    <>
+     <Head>
+        <title>{topPost[0].title}</title>
+        <meta name="description" content="Top articals of medical news " />
+      </Head>
     <section aria-labelledby="top-post">
       <div className="w-full text-center">
         <h2
@@ -54,6 +61,7 @@ const TopPost = () => {
         ))}
       </div>
     </section>
+    </>
   );
 };
 

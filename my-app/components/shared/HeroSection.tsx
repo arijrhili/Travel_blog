@@ -25,8 +25,6 @@ const HeroSection = () => {
             </div>
             <div className="w-full md:w-1/2 px-4">
               <div className="relative mx-auto md:mr-0 max-w-max">
-                <img className="absolute z-10 -left-8 -top-8 w-28 md:w-auto text-yellow-400" src="flex-ui-assets/elements/circle3-violet.svg" alt="" />
-                <img className="absolute z-10 -right-7 -bottom-8 w-28 md:w-auto text-blue-500" src="flex-ui-assets/elements/dots3-red.svg" alt="" />
                 <img className="relative rounded-full border-2 border-white" src="https://static.shuffle.dev/uploads/files/f0/f06b07bbaa333667fb1c271d47148db58b07b467/pexels-evg-kowalievska-1170979.jpg" alt="" />
               </div>
             </div>
