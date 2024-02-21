@@ -18,10 +18,7 @@ const HeroSection = () => {
              
               <h1 className="mb-6 text-3xl md:text-5xl lg:text-6xl leading-tight text-white font-bold tracking-tight">Votre santé et votre bien-être, notre priorité</h1>
               <p className="mb-8 text-lg md:text-xl text-coolGray-400 font-medium">Le site santé de référence avec chaque jour toute l'actualité médicale decryptée par des médecins en exercice et les conseils des meilleurs spécialistes.</p>
-              <div className="flex flex-wrap">
-                <div className="w-full md:w-auto py-1 md:py-0 md:mr-4"><a className="inline-block py-5 px-7 w-full text-base md:text-lg leading-4 text-blue-50 font-medium text-center bg-blue-500 hover:bg-blue-600 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 rounded-md shadow-sm" href="#">+44 0808 239 1352</a></div>
-                <div className="w-full md:w-auto py-1 md:py-0"><a className="inline-block py-5 px-7 w-full text-base md:text-lg leading-4 text-coolGray-100 font-medium text-center bg-coolGray-700 hover:bg-coolGray-800 focus:ring-2 focus:ring-coolGray-700 focus:ring-opacity-50 rounded-md shadow-sm" href="#">Book an appointment</a></div>
-              </div>
+              
             </div>
             <div className="w-full md:w-1/2 px-4">
               <div className="relative mx-auto md:mr-0 max-w-max">

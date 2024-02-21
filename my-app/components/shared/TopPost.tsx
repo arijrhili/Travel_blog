@@ -13,7 +13,7 @@ const TopPost = () => {
     <>
      <Head>
         <title>{topPost[0].title}</title>
-        <meta name="description" content="Top articals of medical news " />
+        <meta name="description" content="Top articals of medical  news " />
       </Head>
     <section aria-labelledby="top-post">
       <div className="w-full text-center">
@@ -25,7 +25,7 @@ const TopPost = () => {
         </h2>
       </div>
 
-      <div className="flex h-full flex-col gap-12 items-center">
+      <div className="max-w-screen-md mx-auto">
         {topPost.map((post, index) => (
             <Link href={{pathname:`/blog/${post.id}`,query:{...post}}}>
             <article key={index}>
@@ -33,8 +33,8 @@ const TopPost = () => {
                
                   <Image
                     src={post.image_path}
-                    width={800}
-                    height={800}
+                    width={400}
+                    height={400}
                     alt={`Image for ${post.title}`}
                   />
                

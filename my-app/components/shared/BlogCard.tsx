@@ -11,7 +11,7 @@ const BlogCard= ({post}:any) => {
        
           <Image
             src={post.image_path}
-            fill
+            width={400}
             alt={`image for ${post.title}`}
             className="object-cover"
           />

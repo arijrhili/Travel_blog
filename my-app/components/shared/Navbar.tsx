@@ -80,7 +80,7 @@ const Navbar: React.FC<NavbarProps> = ({ user }) => {
         </ul>
 
         {!user && (
-          <div className="flex gap-5 flex-1 justify-end max-md:hidden">
+          <div className="flex gap-5 flex-1 justify-end max-md:hidden ">
             <Button
               text="Login"
               onClick={() => router.push("/access")}

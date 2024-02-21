@@ -34,8 +34,8 @@ const LatestPost = () => {
           Latest Post
         </h2>
       </div>
-
-      <div className="flex flex-col gap-10 h-full">
+      <div className="grid grid-cols-3 gap-8 max-lg:grid-cols-1">
+      
         {latestPost
           .slice(0, visibleBlogs)
           .map((post, id) => (
@@ -51,6 +51,7 @@ const LatestPost = () => {
           </div>
         )}
       </div>
+      
     </section>
     </>
   );
