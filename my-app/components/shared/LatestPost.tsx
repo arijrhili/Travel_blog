@@ -42,7 +42,7 @@ const LatestPost = () => {
             <BlogCard post={post} key={id}  />
           ))}
         {visibleBlogs < latestPost.length && (
-          <div className="flex justify-center">
+          <div className="flex justify-center ">
             <Button
               onClick={showMoreBlogs}
               text="Show more"

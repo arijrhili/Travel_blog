@@ -7,11 +7,12 @@ import Link from "next/link";
 const BlogCard= ({post}:any) => {
   return (
     <article className="relative rounded-lg overflow-hidden">
-      <div className="w-[1000px] h-[450px] relative">
+      <div className=" ">
        
           <Image
             src={post.image_path}
-            width={400}
+            width={450}
+            height={400}
             alt={`image for ${post.title}`}
             className="object-cover"
           />
@@ -23,7 +24,7 @@ const BlogCard= ({post}:any) => {
         <div>
           <Tag text={post.tags} />
 
-          <h3 className="text-3xl font-extrabold uppercase text-white">
+          <h3 className="text-2xl font-extrabold uppercase text-white">
             {post.title}
           </h3>
         </div>

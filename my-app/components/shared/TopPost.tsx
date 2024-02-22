@@ -33,7 +33,7 @@ const TopPost = () => {
                
                   <Image
                     src={post.image_path}
-                    width={400}
+                    width={460}
                     height={400}
                     alt={`Image for ${post.title}`}
                   />
