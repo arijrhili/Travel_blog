@@ -1,49 +1,20 @@
 "use client";
 import Link from "next/link";
-import Route from "../ui/Route";
-import MobileMenu from "./MobileMenu";
-import useMenuActive from "@/hooks/useMenuActive";
-import { useEffect, useState } from "react";
-import clsx from "clsx";
+
 
 interface NavbarSectionProps {}
 
 const NavbarSection: React.FC<NavbarSectionProps> = () => {
-  const [isScrolling, setIsScrolling] = useState(false);
-  const [openUserMenu, setOpenUserMenu] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setIsScrolling(true);
-      } else {
-        setIsScrolling(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
+  
   return (
     <nav
-      className={clsx(
-        "py-4 w-full",
-        isScrolling
-          ? "fixed top-0 bg-gray-100  shadow-lg z-10"
-          : "relative"
-      )}
+      className=
+        "py-4 w-full"
     >
       <div
-        className={clsx(
-          "w-[95%] mx-auto  flex items-center justify-between border-b border-slate-700",
-          isScrolling && "pb-0 border-none",
-          !isScrolling && "pb-5"
-        )}
-      >
+        className=
+          "w-[95%] mx-auto  flex items-center justify-between border-b border-slate-700">
 
 
         {/* Medical Specialties Menu */}
