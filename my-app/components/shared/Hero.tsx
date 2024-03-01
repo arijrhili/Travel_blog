@@ -17,7 +17,7 @@ const Hero = () => {
       <h1 className="text-6xl font-extrabold uppercase text-tertiary text-center" >Actualité</h1>
       {topFeatured.map((post, id) => (
         <article key={id} className="flex flex-col gap-5 mb-5 text-center relative">
-          <div className="relative max-h-[600px] overflow-hidden shadow-xl">
+          <div className="relative max-h-[500px] overflow-hidden shadow-xl">
             <Link href={{ pathname: `/blog/${post.id}`, query: { ...post } }}>
              
                 <img

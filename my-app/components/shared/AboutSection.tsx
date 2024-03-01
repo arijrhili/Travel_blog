@@ -55,12 +55,11 @@ const AboutSection: React.FC = () => {
   };
 
   return (
-    <section className="text-black "  >
-      <div className="md:grid md:grid-cols-2 gap-8 items-center mx-24 py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <Image src="/assets/fm.png" alt="about image" width={350} height={500} />
-        <div className="mt-4  md:mt-0 md:mb-4 text-left flex flex-col h-full">
-          <h2 className="text-4xl font-bold text-black mb-4">About Me</h2>
-          <p className="text-base lg:text-lg">
+    <section className="text-black py-8"  >
+      <div className=" items-center mx-24 py-10 px-4  sm:py-12 xl:px-16">
+        <div className="mt-4  md:mt-0 md:mb-4  ">
+          <h2 className="text-6xl font-bold text-black text-center">Qui Sommes Nous ?</h2>
+          <p className="text-base lg:text-lg text-center py-10">
  
 Directeur de la publication :  Dr Jérôme Bargé<br></br>
 
@@ -76,7 +75,7 @@ Webmaster - Responsable technique : Benicio Ferreira
 
 Assistante : Kateline Renaudin
           </p>
-          <div className="flex flex-row justify-start mt-8">
+          <div className="flex flex-row justify-center gap-10 text-center ">
             
             <TabButton
               selectTab={() => handleTabChange("Principes éditoriaux :")}
