@@ -4,7 +4,7 @@ import BlogCard from "./BlogCard";
 import Button from "../ui/Button";
 import { blogData } from "@/constants/blogData";
 import Head from "next/head";
-const service = () => {
+const Service = () => {
   const latestPost = blogData.filter((blog)=>blog.latestPost===true);
 
   const [visibleBlogs, setVisibleBlogs] = useState(5);
@@ -57,4 +57,4 @@ const service = () => {
   );
 };
 
-export default service;
+export default Service;
