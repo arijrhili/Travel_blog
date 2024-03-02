@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const BlogCard= ({post}:any) => {
   return (
-    <article className="relative rounded-lg overflow-hidden">
+    <article className="relative rounded-lg ">
       <div className=" ">
        
           <Image

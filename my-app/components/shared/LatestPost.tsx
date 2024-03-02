@@ -27,12 +27,7 @@ const LatestPost = () => {
       
       <div className="w-full text-center">
 
-        <h2
-          id="latest-post"
-          className="text-center text-2xl font-extrabold uppercase text-tertiary inline-block px-2 mb-10"
-        >
-          Latest Post
-        </h2>
+        
       </div>
       <div className="grid grid-cols-3 gap-8 max-lg:grid-cols-1">
       
@@ -42,7 +37,7 @@ const LatestPost = () => {
             <BlogCard post={post} key={id}  />
           ))}
         {visibleBlogs < latestPost.length && (
-          <div className="flex justify-center ">
+          <div className="flex justify-center mt-4 ">
             <Button
               onClick={showMoreBlogs}
               text="Show more"

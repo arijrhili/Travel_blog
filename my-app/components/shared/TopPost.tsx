@@ -17,12 +17,7 @@ const TopPost = () => {
       </Head>
     <section aria-labelledby="top-post">
       <div className="w-full text-center">
-        <h2
-          id="top-post"
-          className="text-center text-2xl font-extrabold uppercase text-tertiary inline-block px-2 mb-10"
-        >
-          Top Post
-        </h2>
+        
       </div>
 
       <div className="max-w-screen-md mx-auto">
@@ -33,8 +28,8 @@ const TopPost = () => {
                
                   <Image
                     src={post.image_path}
-                    width={460}
-                    height={400}
+                    width={650}
+                    height={650}
                     alt={`Image for ${post.title}`}
                   />
                

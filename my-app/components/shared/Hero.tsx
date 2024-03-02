@@ -14,7 +14,7 @@ const Hero = () => {
   return (
     <section className="relative">
     <div className="w-[95%] mx-auto max-w-[1950px] z-1">
-      <h1 className="text-6xl font-extrabold uppercase text-tertiary text-center" >Actualité</h1>
+    <h1 className="text-6xl font-bold text-black text-center">Actualité</h1>
       {topFeatured.map((post, id) => (
         <article key={id} className="flex flex-col gap-5 mb-5 text-center relative">
           <div className="relative max-h-[500px] overflow-hidden shadow-xl">

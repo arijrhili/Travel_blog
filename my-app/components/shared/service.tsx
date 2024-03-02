@@ -25,7 +25,7 @@ const Service = () => {
       aria-labelledby="latest-post"
     >
       
-      <div className="w-full text-center">
+      <div className="w-[95%]  text-center">
 
         <h2
           id="latest-post"
@@ -41,15 +41,7 @@ const Service = () => {
           .map((post, id) => (
             <BlogCard post={post} key={id}  />
           ))}
-        {visibleBlogs < latestPost.length && (
-          <div className="flex justify-center ">
-            <Button
-              onClick={showMoreBlogs}
-              text="Show more"
-              aria="Show more blog post"
-            />
-          </div>
-        )}
+        
       </div>
       
     </section>
