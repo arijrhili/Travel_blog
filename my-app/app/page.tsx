@@ -4,7 +4,6 @@ import TopPost from '@/components/shared/TopPost'
 import LatestPost from '@/components/shared/LatestPost'
 import HeroSection from '@/components/shared/HeroSection'
 import AboutSection from '@/components/shared/AboutSection'
-import Service from '@/components/shared/service'
 const Home = () => {
   return (<>
    <HeroSection/>
